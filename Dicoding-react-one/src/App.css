@@ -1,0 +1,138 @@
+/* Styles for the Instagram container */
+.instagram-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Menambahkan jarak antara dua kartu */
+  margin: 2em;
+  background-color: #ff0080;
+  padding: 1em;
+}
+
+/* Styles for the Instagram card */
+.instagram-card {
+  width: 350px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background: linear-gradient(
+    145deg,
+    #1e1e1e,
+    #2a2a2a
+  ); /* Latar belakang gelap */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Styles for description list */
+.instagram-card dl {
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center align the text */
+}
+
+.instagram-card dt {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ff0080; /* Neon Pink for Titles */
+  text-shadow: 0 0 5px #ff0080, 0 0 10px #ff0080;
+}
+
+.instagram-card dd {
+  margin: 0 0 15px 0;
+  color: #0ff; /* Neon Cyan for Content */
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Card title */
+.instagram-card h1 {
+  font-size: 24px;
+  color: #fff;
+  margin: 10px 0;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff0080;
+}
+
+/* Username and bio */
+.instagram-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #ff0080;
+}
+
+/* Verified checkmark style */
+.instagram-card p span {
+  color: #0ff; /* Neon Cyan */
+  font-size: 18px;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Alternating colors for cards */
+.instagram-card:nth-child(odd) {
+  border-color: #0ff; /* Neon cyan border for odd cards */
+}
+
+.instagram-card:nth-child(even) {
+  border-color: #ff0080; /* Neon pink border for even cards */
+}
+
+/* Hover effect for the card */
+.instagram-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px #0ff, 0 0 30px #ff0080, 0 0 40px #0ff;
+}
+
+/* Style for children content */
+.instagram-children {
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #ff0075, #8900f2);
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.instagram-children button {
+  background-color: #ff0075;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.instagram-children button:hover {
+  background-color: #ff4d94;
+}
+
+.calender-container {
+  margin-block: 2rem;
+}
+
+/* Animations for cyberpunk feel */
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #ff0080;
+  }
+  50% {
+    text-shadow: 0 0 15px #0ff, 0 0 25px #ff0080;
+  }
+  100% {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #ff0080;
+  }
+}
+
+.instagram-card dt,
+.instagram-card dd,
+.instagram-card h1,
+.instagram-card p {
+  animation: neon-glow 1.5s infinite alternate;
+}

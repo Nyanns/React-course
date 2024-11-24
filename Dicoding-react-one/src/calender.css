@@ -1,0 +1,111 @@
+.calendar {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: "Orbitron", sans-serif;
+  color: #e0e0e0;
+  text-align: center;
+  background: linear-gradient(145deg, #0d0d29, #1b1b45);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(255, 0, 117, 0.5),
+    0px -4px 20px rgba(137, 0, 242, 0.5);
+}
+
+.calendar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar header button {
+  background: linear-gradient(145deg, #ff0075, #8900f2);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calendar header button:hover {
+  background: linear-gradient(145deg, #ff4d94, #a94cff);
+  box-shadow: 0px 0px 10px #ff0075, 0px 0px 20px #8900f2;
+}
+
+.calendar header h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0px 0px 8px #ff0075, 0px 0px 12px #8900f2;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.weekday {
+  font-weight: bold;
+  color: #ff0075;
+  text-shadow: 0px 0px 5px #ff4d94;
+}
+
+.day {
+  padding: 15px;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #1f1f50, #2a2a68);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.day:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px #ff0075, 0px 0px 20px #8900f2;
+}
+
+.day.today {
+  background: linear-gradient(145deg, #ff0075, #8900f2);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 0px 12px #ff4d94, 0px 0px 20px #a94cff;
+}
+
+.empty {
+  background: transparent;
+}
+
+/* Cyberpunk glow effect for the container */
+.calendar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 0, 117, 0.5),
+    rgba(137, 0, 242, 0.5)
+  );
+  filter: blur(10px);
+  z-index: -1;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}

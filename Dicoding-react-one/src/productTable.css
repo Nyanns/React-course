@@ -1,0 +1,101 @@
+/* General container styling */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background: #1b1b2f; /* Dark cyberpunk background */
+  color: #e6e6e6; /* Light text color */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Search bar container */
+.search-bar_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Search input */
+.search-bar_container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: #222;
+  color: #e6e6e6;
+  font-size: 16px;
+}
+
+.search-bar_container input[type="text"]::placeholder {
+  color: #888;
+}
+
+/* Checkbox styling */
+.search-bar__in_stock_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar__in_stock_checkbox input[type="checkbox"] {
+  accent-color: #ff6f61; /* Cyberpunk orange */
+}
+
+.search-bar__in_stock_checkbox label {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Product table container */
+.product-table_container {
+  overflow-x: auto;
+  border-radius: 4px;
+  background: #121212; /* Dark table background */
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background: #232946; /* Darker header background */
+  color: #f4f4f9; /* Bright text for header */
+}
+
+thead th {
+  padding: 10px 15px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #3e3e5e;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #2b2b45; /* Slightly lighter for row contrast */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #1f1f33;
+}
+
+tbody tr:hover {
+  background-color: #3e3e5e; /* Highlight row on hover */
+  transition: background 0.3s ease;
+}
+
+td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #444;
+}
+
+td[colspan="2"] {
+  background-color: #2b2b45; /* Highlight category row */
+  color: #ff6f61; /* Cyberpunk orange */
+  font-weight: bold;
+  text-align: center;
+}

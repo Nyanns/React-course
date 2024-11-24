@@ -1,0 +1,64 @@
+:root {
+  /* Typography */
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height: 1.5;
+  --font-weight: 400;
+
+  /* Colors */
+  --text-color: rgba(0, 255, 0, 0.87); /* Neon green text */
+  --bg-color: #242424; /* Dark gray background */
+  --neon-glow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.7),
+    0 0 30px rgba(0, 255, 0, 0.6); /* Green neon glow effect */
+  --text-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.5); /* Glowing text shadow */
+  --h1-font-size: 4rem; /* Scalable heading size */
+}
+
+body {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    #111,
+    #242424
+  ); /* Gradient effect for depth */
+}
+
+h1 {
+  font-size: 80rem;
+  font-weight: bold;
+  margin: 0.5em 0;
+  text-align: center;
+  color: var(--text-color);
+  text-shadow: var(--text-shadow); /* Apply glowing text shadow */
+  animation: neon-glow 1.5s infinite alternate; /* Neon glow animation */
+}
+
+/* Neon glow animation */
+@keyframes neon-glow {
+  0% {
+    text-shadow: var(--neon-glow);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.7),
+      0 0 40px rgba(0, 255, 0, 0.6);
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem; /* Smaller size on small screens */
+  }
+}
