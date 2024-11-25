@@ -1,0 +1,136 @@
+/* Gaya untuk background global */
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f4f4f4;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Gaya untuk header */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #00ffff;
+  border-bottom: 2px solid #ff00ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff, 0 0 16px #00ffff;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff, 0 0 12px #ff00ff;
+  margin: 0;
+}
+
+/* Gaya untuk kontainer berita */
+.news-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+/* Gaya untuk kartu berita */
+.card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff00ff;
+  border-radius: 8px;
+  width: 500px;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #ff00ff;
+}
+
+/* Gaya untuk header dalam kartu */
+.card header {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.card h2 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  color: #00ffff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border: 1px solid #ff00ff;
+  text-shadow: 0 0 8px #00ffff, 0 0 16px #ff00ff;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Gaya untuk body kartu */
+.card div {
+  padding: 15px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #ff00ff;
+  text-shadow: 0 0 6px #ff00ff, 0 0 12px #00ffff;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #f4f4f4;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+/* Gaya untuk tombol */
+button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #ff00ff, 0 0 16px #00ffff;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
