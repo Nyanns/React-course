@@ -1,0 +1,58 @@
+/* App.css */
+body {
+  background: linear-gradient(145deg, #0f0b28, #1a0935);
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.counter {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  color: #ff33cc;
+  background: #0f0529;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff33cc, 0 0 40px #9900ff;
+}
+
+.counter__title {
+  font-size: 2rem;
+  text-shadow: 0 0 10px #ff33cc, 0 0 20px #9900ff;
+}
+
+.counter__display {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #ffccff;
+  text-shadow: 0 0 10px #ffccff, 0 0 20px #ff33cc;
+}
+
+.counter__controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.counter__button {
+  background: linear-gradient(145deg, #ff33cc, #9900ff);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff33cc, 0 0 20px #9900ff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.counter__button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff99ff, 0 0 40px #ff33cc;
+}

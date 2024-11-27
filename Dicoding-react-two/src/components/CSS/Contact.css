@@ -1,0 +1,88 @@
+/* Base Styling */
+body.cyberpunk-body {
+  font-family: "Roboto Mono", monospace;
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: #00ffe7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  border: 2px solid #00ffe7;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffe7;
+}
+
+/* Title */
+.cyberpunk-title {
+  font-size: 2rem;
+  color: #f72585;
+  text-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077, 0 0 40px #ff0077;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Group */
+.cyberpunk-form__group {
+  margin-bottom: 1.5rem;
+}
+
+.cyberpunk-label {
+  display: block;
+  font-size: 1rem;
+  color: #00ff9e;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px #00ff9e;
+}
+
+/* Input Fields */
+.cyberpunk-input,
+.cyberpunk-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  color: #0affff;
+  background: linear-gradient(90deg, #001c4b, #003d99);
+  box-shadow: 0 0 10px #00ffe7;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.cyberpunk-input:focus,
+.cyberpunk-select:focus {
+  box-shadow: 0 0 15px #00ffee, 0 0 25px #00ffee;
+}
+
+/* Button */
+.cyberpunk-button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff0077, #7e00ff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #ff0077, 0 0 10px #7e00ff;
+  box-shadow: 0 0 15px #ff0077, 0 0 25px #7e00ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.cyberpunk-button:hover {
+  background: linear-gradient(90deg, #7e00ff, #ff0077);
+  box-shadow: 0 0 25px #ff0077, 0 0 35px #7e00ff;
+  transform: scale(1.05);
+}

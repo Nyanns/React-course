@@ -1,0 +1,144 @@
+/* .contact-app adalah block utama untuk aplikasi kontak */
+.contact-app {
+  font-family: "Common Pixel", sans-serif;
+  color: #e1b3ff;
+  background-color: #0f0529; /* Latar belakang gelap dengan kesan cyberpunk */
+  padding: 32px;
+  width: auto !important;
+}
+
+/* .contact-app__title adalah elemen di dalam .contact-app */
+.contact-app__title {
+  font-size: 2rem;
+  color: #ff8eff;
+}
+
+/* .contact-list adalah block untuk daftar kontak */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* .contact-item adalah block untuk setiap item kontak */
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  border: 2px solid #8a2be2; /* Warna ungu neon */
+  border-radius: 8px;
+  width: auto !important;
+  padding: 16px;
+  padding-bottom: 0px;
+  background: linear-gradient(
+    145deg,
+    #240046,
+    #320066
+  ); /* Gradasi ungu gelap */
+  box-shadow: 0 0 15px #e1b3ff, 0 0 30px #8a2be2; /* Cahaya neon */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px) scale(0.95);
+  box-shadow: 0 0 20px #ff8eff, 0 0 40px #b432e9;
+}
+
+/* .contact-item__image adalah elemen gambar dalam .contact-item */
+.contact-item__image img {
+  border-radius: 50%;
+  border: 3px solid #ff8eff;
+  box-shadow: 0 0 10px #ff8eff, 0 0 20px #ff00ff; /* Cahaya pada gambar */
+  filter: brightness(1.2); /* Meningkatkan kecerahan gambar */
+}
+
+/* .contact-item__body adalah elemen yang berisi nama dan username dalam .contact-item */
+.contact-item__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Membuat .contact-item__body menyesuaikan lebar dengan parent */
+  height: 70px;
+  align-items: flex-start; /* Menyusun teks ke kiri (start) */
+  border-left: 2px solid #8a2be2; /* Garis di sebelah kiri dengan warna ungu */
+  padding-left: 16px; /* Padding yang rata di semua sisi */
+}
+
+.contact-item__name {
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  color: #ff8eff; /* Warna ungu neon untuk nama */
+  text-shadow: 0 0 6px #ff00ff, 0 0 12px #ff8eff;
+}
+
+.contact-item__username {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #e1b3ff; /* Warna teks yang lebih lembut */
+  text-shadow: 0 0 4px #8a2be2, 0 0 8px #e1b3ff;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  /* Mengubah tata letak contact-list menjadi kolom pada perangkat kecil */
+  .contact-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Menyesuaikan padding dan margin pada .contact-app */
+  .contact-app {
+    padding: 16px;
+  }
+
+  /* Menyesuaikan ukuran font untuk title */
+  .contact-app__title {
+    font-size: 1.5rem;
+  }
+
+  /* Menyesuaikan ukuran gambar di setiap item kontak */
+  .contact-item__image img {
+    height: 60px; /* Mengurangi ukuran gambar */
+  }
+
+  /* Menyesuaikan tinggi body di setiap item kontak */
+  .contact-item__body {
+    height: 60px;
+    padding-left: 12px;
+  }
+
+  .contact-item__name {
+    font-size: 0.9rem; /* Mengurangi ukuran font nama */
+  }
+
+  .contact-item__username {
+    font-size: 0.8rem; /* Mengurangi ukuran font username */
+  }
+}
+
+/* Responsif untuk perangkat sangat kecil (misalnya ponsel) */
+@media (max-width: 480px) {
+  /* Menurunkan ukuran font lebih lanjut dan mengurangi padding */
+  .contact-app__title {
+    font-size: 1.25rem;
+  }
+
+  .contact-item__image img {
+    height: 50px; /* Ukuran gambar lebih kecil */
+  }
+
+  .contact-item__body {
+    height: 50px;
+    padding-left: 8px;
+  }
+
+  .contact-item__name {
+    font-size: 0.85rem; /* Ukuran font nama lebih kecil */
+  }
+
+  .contact-item__username {
+    font-size: 0.75rem; /* Ukuran font username lebih kecil */
+  }
+}

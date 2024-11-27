@@ -1,12 +1,15 @@
+import React from "react";
+import PropTypes from "prop-types"; // Import PropTypes
 import "./CSS/About.css";
 
-function About() {
-  return (
-    <div className="container-about">
-      <h1 id="satu">About Us</h1>
-      <p id="dua">Learn more about our company and team here.</p>
-    </div>
-  );
+class About extends React.Component {
+  render() {
+    return <p>Hello, {this.props.name}!</p>;
+  }
 }
+
+About.propTypes = {
+  name: PropTypes.string, // Definisi tipe props
+};
 
 export default About;
