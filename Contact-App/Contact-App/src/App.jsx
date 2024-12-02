@@ -17,7 +17,7 @@ function App() {
     <div className="app">
       {/* Judul Aplikasi */}
       <header className="app-header">
-        <h1 style={{ margin: "24px" }}>Contact App</h1>
+        <h1 style={{ padding: "24px" }}>Contact App</h1>
       </header>
 
       {/* Komponen untuk Menambahkan Kontak */}
